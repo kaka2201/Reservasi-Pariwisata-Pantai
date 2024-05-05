@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/icon.png" />
+    <title>Register</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00897b;
+            color: #e0f7fa;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        nav a {
+            color: #e0f7fa;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-login {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px; /* Menyesuaikan padding */
+            max-width: 400px; /* Menyesuaikan lebar maksimum */
+            margin: 0 auto;
+        }
+
+        .form-login h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: calc(100% - 22px); /* Menyesuaikan lebar input dengan padding dan border */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #00897b;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #00897b;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="" />
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Categories</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-login">
+            <h3>Register</h3>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input type="text" id="username" name="username" placeholder="Username" />
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <button type="button" onclick="register()">Register</button>
+        </div>
+    </main>
+    <footer>
+        <h4>&copy; Ingin Liburann Nyaman Dan Tenang? Sama Kami Aja !!!</h4>
+    </footer>
+
+    <script>
+        function register() {
+            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            // Simulasi pengiriman data ke server (gunakan asumsi berhasil)
+            // Anda dapat mengganti bagian ini dengan penggunaan Fetch API untuk mengirim data ke server secara asinkron
+            // Kemudian menampilkan pop-up jika pendaftaran berhasil.
+            // Contoh penggunaan Fetch API:
+            /*
+            fetch('https://example.com/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email, username: username, password: password })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Registration failed');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert("Registration successful!"); // Menampilkan pop-up jika pendaftaran berhasil
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Registration failed. Please try again."); // Menampilkan pop-up jika pendaftaran gagal
+            });
+            */
+
+            // Simulasi pendaftaran berhasil dengan menampilkan pop-up
+            alert("Registration successful!");
+        }
+    </script>
+</body>
+</html>
