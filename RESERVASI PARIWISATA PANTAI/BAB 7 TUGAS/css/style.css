@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #f0f0f0;
+}
+
+nav {
+	display: flex;
+	height: 60px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: #333;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	padding: 10px 15px;
+	transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+	color: #333;
+}
+
+.btn_login {
+	background-color: #007bff;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	margin-top: 20px;
+}
+
+.btn_login:hover {
+	background-color: #007bff;
+}
+
+.jumbotron {
+	background-color: #007bff;
+	color: #fff;
+	padding:20px;
+	text-align: center;
+}
+
+#date {
+    text-align: center;
+    margin-top: 10px; /* Mengurangi margin-top untuk memindahkan ke atas */
+    font-size: 18px;
+}
+
+.jumbotron button {
+	padding: 12px 24px;
+	border: none;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.jumbotron button:hover {
+	background-color: #00897b;
+}
+
+.card-categories {
+    margin: 0 10px;
+    text-align: center;
+    display: flex; /* Menjadikan kontainer flex */
+    flex-direction: column; /* Menyusun item secara vertikal */
+    align-items: center; /* Memusatkan item secara horizontal */
+    justify-content: center; /* Memusatkan item secara vertikal */
+    position: relative; /* Menjadikan posisi relatif untuk mengatur gambar */
+    top: -20px; /* Menggeser gambar ke atas */
+}
+
+.card-categories img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* Tambahkan properti position */
+    z-index: 1; /* Mengatur z-index agar gambar berada di depan teks */
+    transition: transform 0.3s ease; /* Tambahkan transisi untuk gambar */
+}
+	
+
+
+
+.card-categories:hover {
+    transform: translateY(-10px); /* Geser ke atas saat hover */
+}
+
+.card-categories img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Tambahkan transisi untuk gambar */
+}
+
+.card-categories:hover img {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+footer {
+	text-align: center;
+	background-color: #00897b;
+	color: #fff;
+	padding: 20px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
